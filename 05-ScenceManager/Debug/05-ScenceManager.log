@@ -1,0 +1,14 @@
+﻿  Game.cpp
+  Mario.cpp
+  PlayScence.cpp
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(89): warning C4018: '<': signed/unsigned mismatch
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(111): warning C4018: '<': signed/unsigned mismatch
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(134): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(135): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(159): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(160): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(258): warning C4018: '<': signed/unsigned mismatch
+d:\game\gamedev-intro-tutorials-master\05-scencemanager\playscence.cpp(267): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+  05-ScenceManager.vcxproj -> D:\Game\gamedev-intro-tutorials-master\Debug\05-ScenceManager.exe
