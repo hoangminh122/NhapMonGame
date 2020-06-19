@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:a3cfc2ad63576b7a9e25de64d08d78cd:d06ad1ba87a359a8400e9235504d85a5:9841190263df11b6c21c3f62e7220a6e$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="money.png" width="33" height="17">
+    <sprite n="0.png" x="1" y="1" w="15" h="15" pX="0.375" pY="0.666667" oX="0" oY="0" oW="16" oH="15"/>
+    <sprite n="1.png" x="18" y="1" w="14" h="15" pX="0.466667" pY="0.666667" oX="1" oY="0" oW="15" oH="15"/>
+</TextureAtlas>

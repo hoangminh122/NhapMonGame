@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:e78bc1eb27e5084815848456dff0ab54:f64e89293534ff01faaaa6faeab472c8:293d5fb81fed749fb148f362bd1ebbf3$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="SimonAttack.png" width="135" height="32">
+    <sprite n="0.png" x="70" y="1" w="17" h="28" pX="0.647059" pY="0.571429"/>
+    <sprite n="2.png" x="89" y="1" w="45" h="27" pX="0.866667" pY="0.592593"/>
+    <sprite n="3.png" x="36" y="1" w="32" h="30" pX="0.3125" pY="0.566667"/>
+    <sprite n="4.png" x="1" y="1" w="33" h="30" pX="0.30303" pY="0.566667"/>
+</TextureAtlas>

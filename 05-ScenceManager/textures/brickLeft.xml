@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:64a720da0df52e739658b0b14472e02f:3bb7ba39376c8737f8fe2b4677ff5804:7aa545b06043e0c0b723c119ad0e6831$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="BrickLeft.png" width="64" height="256">
+    <sprite n="0.png" x="1" y="1" w="16" h="25"/>
+    <sprite n="1.png" x="1" y="55" w="15" h="23"/>
+    <sprite n="2.png" x="1" y="80" w="15" h="23"/>
+    <sprite n="3.png" x="1" y="28" w="16" h="25"/>
+</TextureAtlas>

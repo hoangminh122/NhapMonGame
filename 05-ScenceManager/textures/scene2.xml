@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:15afbc501f7a6ad3d7d753f4bc1521c1:7d2845eed6c641d7ba0492d693bc3dc0:ac8da2543fa8efe5cd301c7eec8293a5$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="scene2.png" width="256" height="256">
+    <sprite n="bg_sence2-0.png" x="1" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-1.png" x="24" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-2.png" x="47" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-3.png" x="70" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-4.png" x="93" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-5.png" x="231" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-6.png" x="116" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-7.png" x="139" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-8.png" x="162" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-9.png" x="185" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-10.png" x="208" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-11.png" x="231" y="1" w="21" h="24"/>
+    <sprite n="bg_sence2-12.png" x="1" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-13.png" x="24" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-14.png" x="47" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-15.png" x="70" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-16.png" x="93" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-17.png" x="116" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-18.png" x="139" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-19.png" x="162" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-20.png" x="185" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-21.png" x="208" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-22.png" x="231" y="27" w="21" h="24"/>
+    <sprite n="bg_sence2-23.png" x="1" y="53" w="21" h="24"/>
+</TextureAtlas>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:8eee0ae2238ef0778b43a4fe0bfc43ff:c814da4200b083512c7b3e135100bc88:1da8adadb9ee005e57c938ad8e539c04$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="scene1.png" width="1024" height="1024">
+    <sprite n="Background_entrance-0.png" x="0" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-1.png" x="23" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-2.png" x="46" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-3.png" x="69" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-4.png" x="92" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-5.png" x="115" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-6.png" x="138" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-7.png" x="161" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-8.png" x="184" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-9.png" x="207" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-10.png" x="230" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-11.png" x="230" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-12.png" x="230" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-13.png" x="230" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-14.png" x="253" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-15.png" x="276" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-16.png" x="299" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-17.png" x="322" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-18.png" x="345" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-19.png" x="368" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-20.png" x="391" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-21.png" x="414" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-22.png" x="437" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-23.png" x="460" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-24.png" x="483" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-25.png" x="506" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-26.png" x="529" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-27.png" x="552" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-28.png" x="575" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-29.png" x="598" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-30.png" x="621" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-31.png" x="644" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-32.png" x="667" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-33.png" x="690" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-34.png" x="713" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-35.png" x="736" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-36.png" x="759" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-37.png" x="782" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-38.png" x="805" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-39.png" x="828" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-40.png" x="851" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-41.png" x="874" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-42.png" x="897" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-43.png" x="920" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-44.png" x="943" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-45.png" x="966" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-46.png" x="989" y="0" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-47.png" x="0" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-48.png" x="23" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-49.png" x="46" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-50.png" x="69" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-51.png" x="92" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-52.png" x="115" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-53.png" x="138" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-54.png" x="161" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-55.png" x="184" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-56.png" x="207" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-57.png" x="230" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-58.png" x="253" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-59.png" x="276" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-60.png" x="299" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-61.png" x="322" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-62.png" x="345" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-63.png" x="368" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-64.png" x="391" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-65.png" x="414" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-66.png" x="437" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="Background_entrance-67.png" x="460" y="24" w="23" h="24" pX="0.5" pY="0.5"/>
+</TextureAtlas>
