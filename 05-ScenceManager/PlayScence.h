@@ -4,15 +4,17 @@
 #include "Scence.h"
 #include "GameObject.h"
 #include "Brick.h"
-#include "Mario.h"
+#include "Simon.h"
 #include "Goomba.h"
 #include "Koopas.h"
+#include "BackGround.h"
+#include "FireCol.h"
 
 
 class CPlayScene: public CScene
 {
 protected: 
-	CMario *player;					// A play scene has to have player, right? 
+	CSimon *player;					// A play scene has to have player, right? 
 
 	vector<LPGAMEOBJECT> objects;
 
