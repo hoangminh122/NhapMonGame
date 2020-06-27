@@ -21,7 +21,7 @@ public:
 	void Draw(float x, float y, int alpha = 255);
 };
 
-typedef CSprite * LPSPRITE;
+typedef CSprite * LPSPRITE;                                                               // ??? chua hieu, lau qua nen quen
 
 /*
 	Manage sprite database

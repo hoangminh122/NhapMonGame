@@ -28,8 +28,8 @@ void CSprite::Draw(float x, float y, int alpha)
 
 void CSprites::Add(int id, int left, int top, int right, int bottom, LPDIRECT3DTEXTURE9 tex)
 {
-	LPSPRITE s = new CSprite(id, left, top, right, bottom, tex);
-	sprites[id] = s;
+	LPSPRITE s = new CSprite(id, left, top, right, bottom, tex);           //tao 1 con tro sprire de them vao array
+	sprites[id] = s;													  //them vao mang
 
 	DebugOut(L"[INFO] sprite added: %d, %d, %d, %d, %d \n", id, left, top, right, bottom);
 }
