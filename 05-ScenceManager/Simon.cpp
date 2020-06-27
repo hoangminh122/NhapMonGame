@@ -15,6 +15,9 @@ CSimon::CSimon() : CGameObject()
 	level = SIMON_LEVEL_BIG;
 	untouchable = 0;
 	SetState(SIMON_STATE_IDLE);
+
+	whip = new CWhip();
+	usingWhip = false;
 }
 int CSimon::isAttack = 0;
 int CSimon::upBox = 0;
@@ -34,7 +37,8 @@ void CSimon::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 	// turn off collision when die 
 	if (state != SIMON_STATE_DIE)
 		CalcPotentialCollisions(coObjects, coEvents);
-
+	// update whip
+	whip->Update(dt, coObjects);
 	// reset untouchable timer if untouchable time has passed
 	if (GetTickCount() - untouchable_start > SIMON_UNTOUCHABLE_TIME)
 	{
@@ -171,9 +175,25 @@ void CSimon::Render()
 
 	animation_set->at(ani)->Render(x, y, alpha);
 
+	if (isAttack && usingWhip)
+	{
+
+		whip->Render();
+
+		whip->isAttack = true;
+	}
+
 	RenderBoundingBox();
 }
 
+void CSimon::Reset()
+{
+	SetState(SIMON_STATE_IDLE);
+	SetPosition(start_x, start_y);
+	SetSpeed(0, 0);
+	/*this->blood = 16;*/
+
+}
 void CSimon::SetState(int state)
 {
 	CGameObject::SetState(state);
@@ -203,7 +223,7 @@ void CSimon::SetState(int state)
 		break;
 	case SIMON_STATE_ATTACK:
 		isAttack = true;
-		if (!useWhip) {
+		if (!usingWhip) {
 			float simon_x = 0, simon_y = 0;
 			GetPosition(simon_x, simon_y);
 			//tao 1 doi tuong vu khi

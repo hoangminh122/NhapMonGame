@@ -8,8 +8,8 @@ void BackGround::Render()
 
 void BackGround::GetBoundingBox(float &l, float &t, float &r, float &b)
 {
-	l = x;
+	/*l = x;
 	t = y;
 	r = x + BACKGROUND_BBOX_WIDTH;
-	b = y + BACKGROUND_BBOX_HEIGHT;
+	b = y + BACKGROUND_BBOX_HEIGHT;*/
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include "GameObject.h"
-
+#include "Whip.h"
 #include "Weapon.h"
 
 #define SIMON_WALKING_SPEED		0.15f 
@@ -55,7 +55,9 @@
 
 class CSimon : public CGameObject
 {
-	
+	float start_x;
+	float start_y;
+
 	int MARIO_BIG_BBOX_WIDTH_ATTACK;
 	int level;
 	int ani;
@@ -65,20 +67,26 @@ class CSimon : public CGameObject
 	int stateWeapon;							//trang thai vu khi
 	CWeapon * weapon;							//tao doi tuong vu khi
 
+	CWhip *whip;
+
 public:
 
 	// check type attack
-	bool useWhip;
+	bool usingWhip;
 
 	static int upBox;
 	static int isAttack;
 	CSimon();
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT> *colliable_objects = NULL);
 	virtual void Render();
+
+	void Reset();
+
 	void SetState(int state);
 	void SetLevel(int l) { level = l; }
 	void StartUntouchable() { untouchable = 1; untouchable_start = GetTickCount(); }
 
+	void SetWhip(int _level) { whip->SetLevel(_level); }
 	int GetDirection() { return this->nx; }    //get nx
 
 	virtual void GetBoundingBox(float &left, float &top, float &right, float &bottom);

@@ -41,8 +41,8 @@ class CGame
 	int screen_width;
 	int screen_height; 
 
-	unordered_map<int, LPSCENE> scenes;
-	int current_scene; 
+	unordered_map<int, LPSCENE> scenes;                     //map scene theo id : chua tim hieu ????
+	int current_scene;										//man hinh hien tai
 
 	void _ParseSection_SETTINGS(string line);
 	void _ParseSection_SCENES(string line);

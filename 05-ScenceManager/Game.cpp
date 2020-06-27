@@ -237,6 +237,7 @@ void CGame::SweptAABB(
 
 
 	if (dx == 0 && dy == 0) return;		// moving object is not moving > obvious no collision
+										//khong di chuyen cung có the xa ra va cham
 
 	if (dx > 0)
 	{
@@ -325,7 +326,7 @@ void CGame::_ParseSection_SETTINGS(string line)
 
 	if (tokens.size() < 2) return;
 	if (tokens[0] == "start")
-		current_scene = atoi(tokens[1].c_str());
+		current_scene = atoi(tokens[1].c_str());							// chuyen doi ve so nguyen lay scene start
 	else
 		DebugOut(L"[ERROR] Unknown game setting %s\n", ToWSTR(tokens[0]).c_str());
 }
@@ -335,11 +336,11 @@ void CGame::_ParseSection_SCENES(string line)
 	vector<string> tokens = split(line);
 
 	if (tokens.size() < 2) return;
-	int id = atoi(tokens[0].c_str());
-	LPCWSTR path = ToLPCWSTR(tokens[1]);
+	int id = atoi(tokens[0].c_str());                                       //lay id scene
+	LPCWSTR path = ToLPCWSTR(tokens[1]);                                   //lay duong dan file scenen txt
 
-	LPSCENE scene = new CPlayScene(id, path);
-	scenes[id] = scene;
+	LPSCENE scene = new CPlayScene(id, path);                              //tao 1 doi tuong playscene khoi tao id ,path
+	scenes[id] = scene;                                                    // danh dau doi tuong theo id de nhan biet ve sau
 }
 
 /*
@@ -384,20 +385,20 @@ void CGame::Load(LPCWSTR gameFile)
 
 	DebugOut(L"[INFO] Loading game file : %s has been loaded successfully\n",gameFile);
 
-	SwitchScene(current_scene);
+	SwitchScene(current_scene);                                           //chuyen man hinh
 }
 
 void CGame::SwitchScene(int scene_id)
 {
 	// IMPORTANT: has to implement "unload" previous scene assets to avoid duplicate resources
-	current_scene = scene_id;
+	current_scene = scene_id;										     //current-scene ban dau la man 1	
 
-	LPSCENE s = scenes[current_scene];
+	LPSCENE s = scenes[current_scene];                                   //tim kiem scene theo id (scene da ton tai san trong map()) 
 	s->Unload();
 
-	CTextures::GetInstance()->Clear();
-	CSprites::GetInstance()->Clear();
-	CAnimations::GetInstance()->Clear();
+	CTextures::GetInstance()->Clear();                                  //xoa texture cu
+	CSprites::GetInstance()->Clear();                                   //xoa sprite cu
+	CAnimations::GetInstance()->Clear();                                ////xoa animation cu
 
 	CGame::GetInstance()->SetKeyHandler(s->GetKeyEventHandler());
 	s->Load();
