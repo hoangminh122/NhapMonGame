@@ -17,8 +17,48 @@
 #define SIMON_STATE_ATTACK			600
 #define SIMON_STATE_DEMO			700
 #define SIMON_STATE_DIE				400
+#define SIMON_STATE_SIT				500
+#define SIMON_STATE_GO_UP			800
+#define SIMON_STATE_GO_DOWN			900
+#define SIMON_STATE_HURT			700
+
+#define SIMON_ANI_GO_UP_LEFT		15
+#define SIMON_ANI_GO_UP_RIGHT		16
+
+#define SIMON_ANI_SIT_RIGHT			6
+#define SIMON_ANI_SIT_LEFT			7
+
+#define SIMON_ANI_ATTACK_UP_LEFT	21
+#define SIMON_ANI_ATTACK_UP_RIGHT	22
+
+#define SIMON_ANI_SIT_ATTACK_RIGHT	11
+#define SIMON_ANI_SIT_ATTACK_LEFT	12
+
+#define SIMON_ANI_GO_DOWN_LEFT		17
+#define SIMON_ANI_GO_DOWN_RIGHT		18
+#define SIMON_ANI_ATTACK_DOWN_LEFT	19
+#define SIMON_ANI_ATTACK_DOWN_RIGHT	20
+
+#define SIMON_ANI_ATTACK_RIGHT		8
+#define SIMON_ANI_ATTACK_LEFT		9
+
+
+#define SIMON_ANI_LEVELUP_RIGHT		13
+#define SIMON_ANI_LEVELUP_LEFT		14
+
+#define SIMON_ANI_HURT_LEFT			27
+#define SIMON_ANI_HURT_RIGHT		28
+
+#define SIMON_ANI_IDLE_GO_UP_LEFT	23
+#define SIMON_ANI_IDLE_GO_UP_RIGHT	24
 
 #define SIMON_ANI_IDLE_RIGHT		0
+#define SIMON_ANI_IDLE_LEFT			1
+
+#define SIMON_ANI_IDLE_GO_DOWN_LEFT	25
+#define SIMON_ANI_IDLE_GO_DOWN_RIGHT	26
+
+
 
 #define SIMON_ANI_JUMP_RIGHT		4
 #define SIMON_ANI_JUMP_LEFT			5
@@ -70,12 +110,28 @@ class CSimon : public CGameObject
 	CWhip *whip;
 
 public:
+	// check active
+	bool isAttack;
+	bool isJump;
+	bool isSit;
+	bool isLevelUp;
+	bool isHurt;
 
 	// check type attack
 	bool usingWhip;
+	bool isFlyingWeapon;
+
+	// check stair
+	bool isStairUp;
+	bool isStairDown;
+	bool isGoUp;
+	bool isGoDown;
+
+	bool isFinish;
+	// check type attack
 
 	static int upBox;
-	static int isAttack;
+	//static int isAttack;
 	CSimon();
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT> *colliable_objects = NULL);
 	virtual void Render();

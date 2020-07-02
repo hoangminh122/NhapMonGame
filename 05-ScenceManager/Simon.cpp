@@ -19,7 +19,6 @@ CSimon::CSimon() : CGameObject()
 	whip = new CWhip();
 	usingWhip = false;
 }
-int CSimon::isAttack = 0;
 int CSimon::upBox = 0;
 void CSimon::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 {
@@ -149,34 +148,191 @@ void CSimon::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 void CSimon::Render()
 {
 	ani = SIMON_ANI_IDLE_RIGHT;
+
 	if (state == SIMON_STATE_DIE)
 		ani = SIMON_ANI_DIE;
-	if (state == SIMON_STATE_JUMP)
+	else if (state == SIMON_STATE_SIT)
 	{
-
 		if (nx > 0)
 		{
-			ani = SIMON_ANI_JUMP_RIGHT;
+			if (isAttack)
+				ani = SIMON_ANI_SIT_ATTACK_RIGHT;
+			else
+				ani = SIMON_ANI_SIT_RIGHT;
 		}
 		else
 		{
-			ani = SIMON_ANI_JUMP_LEFT;
+			if (isAttack)
+				ani = SIMON_ANI_SIT_ATTACK_LEFT;
+			else
+				ani = SIMON_ANI_SIT_LEFT;
+		}
+
+		isSit = false;
+	}
+	else if (state == SIMON_STATE_HURT)
+	{
+		if (nx > 0)
+		{
+			ani = SIMON_ANI_HURT_RIGHT;
+		}
+		else
+		{
+			ani = SIMON_ANI_HURT_LEFT;
 		}
 	}
-	else if (vx > 0)
-		ani = SIMON_ANI_WALKING_RIGHT;
-	
-	else if (vx < 0) {
-		ani = SIMON_ANI_WALKING_LEFT;
+	else if (state == SIMON_STATE_JUMP)
+	{
+		if (isJump)
+		{
+			if (nx > 0)
+			{
+				if (isAttack)
+					ani = SIMON_ANI_ATTACK_RIGHT;
+				else
+					ani = SIMON_ANI_JUMP_RIGHT;
+			}
+			else
+			{
+				if (isAttack)
+					ani = SIMON_ANI_ATTACK_LEFT;
+				else
+					ani = SIMON_ANI_JUMP_LEFT;
+			}
+		}
+		else return;
 	}
-	//else ani = SIMON_ANI_WALKING_LEFT;
+	else if (state == SIMON_STATE_GO_UP && isGoUp == true)
+	{
+		if (nx > 0)
+		{
+			if (isAttack)
+				ani = SIMON_ANI_ATTACK_UP_RIGHT;
+			else
+				ani = SIMON_ANI_GO_UP_RIGHT;
+		}
+		else
+		{
+			if (isAttack)
+				ani = SIMON_ANI_ATTACK_UP_LEFT;
+			else
+				ani = SIMON_ANI_GO_UP_LEFT;
+		}
+	}
+	else if (state == SIMON_STATE_GO_DOWN && isGoDown == true)
+	{
+		if (nx > 0)
+		{
+			if (isAttack)
+				ani = SIMON_ANI_ATTACK_DOWN_RIGHT;
+			else
+				ani = SIMON_ANI_GO_DOWN_RIGHT;
+		}
+		else
+		{
+			if (isAttack)
+				ani = SIMON_ANI_ATTACK_DOWN_LEFT;
+			else
+				ani = SIMON_ANI_GO_DOWN_LEFT;
+		}
+	}
+	else
+	{
+		if (vx == 0)
+		{
+			if (isAttack)
+			{
+				if (nx > 0)
+					ani = SIMON_ANI_ATTACK_RIGHT;
+				else ani = SIMON_ANI_ATTACK_LEFT;
+			}
+			else if (isLevelUp)
+			{
+				if (nx > 0)
+					ani = SIMON_ANI_LEVELUP_RIGHT;
+				else ani = SIMON_ANI_LEVELUP_LEFT;
+			}
+			else if (isHurt)
+			{
+				if (nx > 0)
+					ani = SIMON_ANI_HURT_RIGHT;
+				else ani = SIMON_ANI_HURT_LEFT;
+			}
+			else
+			{
+				if (isGoUp == true && isGoDown == false)
+				{
+					if (nx > 0)
+						ani = SIMON_ANI_IDLE_GO_UP_RIGHT;
+					else ani = SIMON_ANI_IDLE_GO_UP_LEFT;
+				}
+				else if (isGoUp == false && isGoDown == true)
+				{
+					if (nx > 0)
+						ani = SIMON_ANI_IDLE_GO_DOWN_RIGHT;
+					else ani = SIMON_ANI_IDLE_GO_DOWN_LEFT;
+				}
+				else
+				{
+					if (nx > 0)
+						ani = SIMON_ANI_IDLE_RIGHT;
+					else ani = SIMON_ANI_IDLE_LEFT;
+				}
+
+			}
+
+		}
+		else if (vx > 0)
+			ani = SIMON_ANI_WALKING_RIGHT;
+		else ani = SIMON_ANI_WALKING_LEFT;
+	}
+
 	int alpha = 255;
 	if (untouchable) alpha = 128;
-
 	animation_set->at(ani)->Render(x, y, alpha);
+
 
 	if (isAttack && usingWhip)
 	{
+		if (state == SIMON_STATE_SIT || state == SIMON_STATE_JUMP)
+		{
+			whip->SetDirection(nx);
+			if (whip->GetDirection() > 0)
+			{
+				whip->SetPosition(x - 14, y + 5);
+			}
+			else
+			{
+				if (whip->GetLevel() > 1)
+				{
+					whip->SetPosition(x - 40, y + 5);
+				}
+				else
+				{
+					whip->SetPosition(x - 20, y + 5);
+				}
+			}
+		}
+		else
+		{
+			whip->SetDirection(nx);
+			if (whip->GetDirection() > 0)
+			{
+				whip->SetPosition(x - 15, y + 2);
+			}
+			else
+			{
+				if (whip->GetLevel() > 1)
+				{
+					whip->SetPosition(x - 40, y + 2);
+				}
+				else
+				{
+					whip->SetPosition(x - 20, y + 2);
+				}
+
+			}
+		}
 
 		whip->Render();
 

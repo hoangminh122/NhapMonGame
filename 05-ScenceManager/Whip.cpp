@@ -165,6 +165,15 @@ void CWhip::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 
 void CWhip::Render()
 {
+	if (this->level == 1)
+	{
+		if (nx > 0)
+		{
+			ani = WHIP_ANI_RIGHT_LV1;
+		}
+		else
+			ani = WHIP_ANI_LEFT_LV1;
+	}
 	/*if (this->level == 1)
 	{
 		if (nx > 0)
@@ -211,7 +220,7 @@ void CWhip::Render()
 			ani = WHIP_ANI_LEFT_LV5;
 	}*/
 	
-	animation_set->at(1)->Render(x, y);
+	animation_set->at(ani)->Render(x, y);
 	RenderBoundingBox();
 }
 
@@ -243,15 +252,15 @@ void CWhip::SetPosition(float x, float y)
 	this->y = y;
 }
 
-//void CWhip::SetDirection(int nx)
-//{
-//	this->nx = nx;
-//}
-//
-//int CWhip::GetDirection()
-//{
-//	return this->nx;
-//}
+void CWhip::SetDirection(int nx)
+{
+	this->nx = nx;
+}
+
+int CWhip::GetDirection()
+{
+	return this->nx;
+}
 //
 //void CWhip::LevelUp()
 //{
