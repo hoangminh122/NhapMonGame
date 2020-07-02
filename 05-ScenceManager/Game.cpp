@@ -14,6 +14,60 @@ CGame * CGame::__instance = NULL;
 	- hInst: Application instance handle
 	- hWnd: Application window handle
 */
+int CGame::RandomItem(int _item)
+{
+	int itemRandom;
+
+	if (_item > 6)
+	{
+		int random = rand() % 100;
+
+		if (random < 10)
+		{
+			itemRandom = 0;// ANI_ITEM_WHIP
+		}
+		else if (random < 20 && random >= 10)
+		{
+			itemRandom = 1;// ANI_ITEM_KNIFE
+		}
+		else if (random < 30 && random >= 20)
+		{
+			itemRandom = 2;// ANI_ITEM_AXE
+		}
+		else if (random < 40 && random >= 30)
+		{
+			itemRandom = 3;// ANI_ITEM_BOMERANG
+		}
+		else if (random < 50 && random >= 40)
+		{
+			itemRandom = 6;// ANI_ITEM_FIRE
+		}
+		else if (random < 60 && random >= 50)
+		{
+			itemRandom = 4;// ANI_ITEM_SMALL_HEART
+		}
+		else
+		{
+			itemRandom = 5;// ANI_ITEM_BIG_HEART
+		}
+	}
+	else
+	{
+		itemRandom = _item;
+	}
+
+	return itemRandom;
+}
+
+
+bool CGame::CheckCollision(float l1, float t1, float r1, float b1, float l2, float t2, float r2, float b2)
+{
+	if (t1 <= b2 && b1 >= t2 && l1 <= r2 && r1 >= l2)
+		return true;
+
+	return false;
+}
+
 void CGame::Init(HWND hWnd)
 {
 	LPDIRECT3D9 d3d = Direct3DCreate9(D3D_SDK_VERSION);

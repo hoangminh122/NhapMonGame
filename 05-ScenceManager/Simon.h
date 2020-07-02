@@ -3,6 +3,7 @@
 #include "Whip.h"
 #include "Weapon.h"
 
+
 #define SIMON_WALKING_SPEED		0.15f 
 //0.1f
 #define SIMON_JUMP_SPEED_Y		0.5f

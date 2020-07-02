@@ -6,6 +6,8 @@
 #include "Textures.h"
 #include "Sprites.h"
 #include "Portal.h"
+#include "Torch.h"
+
 
 using namespace std;
 
@@ -158,7 +160,7 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 	//case OBJECT_TYPE_GOOMBA: obj = new CGoomba(); break;
 	case OBJECT_TYPE_BRICK: obj = new CBrick(); break;
 	case OBJECT_TYPE_KOOPAS: obj = new CKoopas(); break;
-	case OBJECT_TYPE_FIRECOL: obj = new FireCol(); break;
+	case OBJECT_TYPE_FIRECOL: obj = new CTorch(1); break;
 	case OBJECT_TYPE_BACKGROUND: obj = new BackGround(); break;
 	case OBJECT_TYPE_PORTAL:
 		{	

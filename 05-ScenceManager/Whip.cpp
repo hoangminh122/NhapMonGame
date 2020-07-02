@@ -12,9 +12,26 @@ CWhip::CWhip() : CGameObject()
 void CWhip::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
 	CGameObject::Update(dt);
-	/*CGame * game = CGame::GetInstance();*/
+	CGame * game = CGame::GetInstance();
 	if (isAttack)
 	{
+		for (UINT i = 0; i < coObjects->size(); i++)
+		{
+			if (dynamic_cast<CTorch*>(coObjects->at(i))) {
+				CTorch* torch = dynamic_cast<CTorch*>(coObjects->at(i));
+
+				float l1, t1, r1, b1, l2, t2, r2, b2;
+				GetBoundingBox(l1, t1, r1, b1);
+				torch->GetBoundingBox(l2, t2, r2, b2);
+
+				if (game->CheckCollision(l1, t1, r1, b1, l2, t2, r2, b2) == true)
+				{
+					torch->isAttacked = true;
+					torch->SetBlood(GetDame());
+					isAttack = false;
+				}
+			}
+		}
 		/*for (UINT i = 0; i < coObjects->size(); i++)
 		{
 			if (dynamic_cast<CTorch*>(coObjects->at(i))) {

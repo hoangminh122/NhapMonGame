@@ -48,6 +48,8 @@ class CGame
 	void _ParseSection_SCENES(string line);
 
 public:
+	int RandomItem(int _item);
+	bool CheckCollision(float l1, float t1, float r1, float b1, float l2, float t2, float r2, float b2);
 	void InitKeyboard();
 	void SetKeyHandler(LPKEYEVENTHANDLER handler) { keyHandler = handler; }
 	void Init(HWND hWnd);

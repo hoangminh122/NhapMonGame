@@ -7,7 +7,6 @@
 
 #include "Goomba.h"
 #include "Portal.h"
-#include "FireCol.h"
 
 CSimon::CSimon() : CGameObject()
 {
@@ -80,27 +79,27 @@ void CSimon::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 		for (UINT i = 0; i < coEventsResult.size(); i++)
 		{
 			LPCOLLISIONEVENT e = coEventsResult[i];
-			if (dynamic_cast<FireCol *>(e->obj)) // if e->obj is Goomba 
-			{
-				FireCol *fireCol = dynamic_cast<FireCol *>(e->obj);
-				//CMario *mario = dynamic_cast<CMario *>(e->obj);
-				//CMario *mario = ((CPlayScene*)scence)->player;
-				// jump on top >> kill Goomba and deflect a bit 
-				if (e->nx < 0 || e->ny < 0)
-				{
-					/*	if (fireCol->GetState() != FIRECOL_STATE_DIE)
-						{*/
-						/*int b=CGameObject::GetState();
-						int a=this->GetState();
-						DebugOut(L"[INFO] Switching to scene %d", a);*/
-						//this->SetState(MARIO_STATE_ATTACK);
+			//if (dynamic_cast<FireCol *>(e->obj)) // if e->obj is Goomba 
+			//{
+			//	FireCol *fireCol = dynamic_cast<FireCol *>(e->obj);
+			//	//CMario *mario = dynamic_cast<CMario *>(e->obj);
+			//	//CMario *mario = ((CPlayScene*)scence)->player;
+			//	// jump on top >> kill Goomba and deflect a bit 
+			//	if (e->nx < 0 || e->ny < 0)
+			//	{
+			//		/*	if (fireCol->GetState() != FIRECOL_STATE_DIE)
+			//			{*/
+			//			/*int b=CGameObject::GetState();
+			//			int a=this->GetState();
+			//			DebugOut(L"[INFO] Switching to scene %d", a);*/
+			//			//this->SetState(MARIO_STATE_ATTACK);
 
-					fireCol->SetState(FIRECOL_STATE_DIE);
-					//vy = -MARIO_JUMP_DEFLECT_SPEED;
-				//}
-				}
+			//		fireCol->SetState(FIRECOL_STATE_DIE);
+			//		//vy = -MARIO_JUMP_DEFLECT_SPEED;
+			//	//}
+			//	}
 
-			} // if FireCol
+			//} // if FireCol
 			if (dynamic_cast<CGoomba *>(e->obj)) // if e->obj is Goomba 
 			{
 				CGoomba *goomba = dynamic_cast<CGoomba *>(e->obj);

@@ -8,7 +8,7 @@
 #include "Goomba.h"
 #include "Koopas.h"
 #include "BackGround.h"
-#include "FireCol.h"
+#include "Torch.h"
 
 
 class CPlayScene: public CScene
