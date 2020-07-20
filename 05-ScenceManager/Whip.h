@@ -50,8 +50,8 @@ public:
 	void SetCurrentFrame(int frame) { animation_set->at(ani)->SetCurrentFrame(frame); }
 
 	int GetLevel() { return this->level; }
-	void LevelUp();
-	void SetLevel(int _level);
+	//void LevelUp();
+	//void SetLevel(int _level);
 
 	int GetDame() { return this->dame; }
 
